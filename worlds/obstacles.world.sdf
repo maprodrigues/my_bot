@@ -1,0 +1,174 @@
+<sdf version='1.9'>
+  <world name='empty'>
+    <physics name='1ms' type='ignored'>
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+    </physics>
+    <plugin name='gz::sim::systems::Physics' filename='ignition-gazebo-physics-system'/>
+    <plugin name='gz::sim::systems::UserCommands' filename='ignition-gazebo-user-commands-system'/>
+    <plugin name='gz::sim::systems::SceneBroadcaster' filename='ignition-gazebo-scene-broadcaster-system'/>
+    <plugin name='gz::sim::systems::Contact' filename='ignition-gazebo-contact-system'/>
+    <gravity>0 0 -9.8</gravity>
+    <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
+    <atmosphere type='adiabatic'/>
+    <scene>
+      <ambient>0.4 0.4 0.4 1</ambient>
+      <background>0.7 0.7 0.7 1</background>
+      <shadows>true</shadows>
+    </scene>
+    <model name='ground_plane'>
+      <static>true</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <material>
+            <ambient>0.8 0.8 0.8 1</ambient>
+            <diffuse>0.8 0.8 0.8 1</diffuse>
+            <specular>0.8 0.8 0.8 1</specular>
+          </material>
+        </visual>
+        <pose>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>0 0 0 0 -0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <include>
+      <uri>file:///home/marco/.ignition/fuel/fuel.gazebosim.org/openrobotics/models/bathtub/1</uri>
+      <name>Bathtub</name>
+      <pose>2.7414 -2.80255 0 0 -0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/marco/.ignition/fuel/fuel.gazebosim.org/openrobotics/models/casual female/4</uri>
+      <name>casual_female</name>
+      <pose>5.86167 1.78631 0 0 -0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/marco/.ignition/fuel/fuel.gazebosim.org/openrobotics/models/turtle/5</uri>
+      <name>turtle</name>
+      <pose>1.66671 0.915248 0.065 -0 -0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/marco/.ignition/fuel/fuel.gazebosim.org/openrobotics/models/crocodile/4</uri>
+      <name>crocodile</name>
+      <pose>-0.265151 3.334 0.015 0 -0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/marco/.ignition/fuel/fuel.gazebosim.org/openrobotics/models/small case/5</uri>
+      <name>small_case</name>
+      <pose>0.390644 -1.73294 0.027108 -1.5708 0 -0</pose>
+    </include>
+    <include>
+      <uri>file:///home/marco/.ignition/fuel/fuel.gazebosim.org/openrobotics/models/casual female/4</uri>
+      <name>casual_female_1</name>
+      <pose>2.43709 3.39891 0 0 -0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/marco/.ignition/fuel/fuel.gazebosim.org/openrobotics/models/casual female/4</uri>
+      <name>casual_female_2</name>
+      <pose>-1.77246 -1.57215 0 0 -0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/marco/.ignition/fuel/fuel.gazebosim.org/openrobotics/models/turtle/5</uri>
+      <name>turtle_1</name>
+      <pose>-2.4319 0.806452 0.065 0 -0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/marco/.ignition/fuel/fuel.gazebosim.org/openrobotics/models/turtle/5</uri>
+      <name>turtle_2</name>
+      <pose>0.408923 1.91775 0.065 0 -0 -4e-06</pose>
+    </include>
+    <include>
+      <uri>file:///home/marco/.ignition/fuel/fuel.gazebosim.org/openrobotics/models/crocodile/4</uri>
+      <name>crocodile_1</name>
+      <pose>1.23379 -0.027748 0.015 -0 0 -9e-06</pose>
+    </include>
+    <include>
+      <uri>file:///home/marco/.ignition/fuel/fuel.gazebosim.org/openrobotics/models/small case/5</uri>
+      <name>small_case_1</name>
+      <pose>-3.23074 3.93362 0.027108 -1.5708 -0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/marco/.ignition/fuel/fuel.gazebosim.org/openrobotics/models/small case/5</uri>
+      <name>small_case_2</name>
+      <pose>2.62973 1.43809 0.027108 -1.5708 -0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/marco/.ignition/fuel/fuel.gazebosim.org/openrobotics/models/turtle/5</uri>
+      <name>turtle_3</name>
+      <pose>-2.94016 3.0489 0.065 0 -0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/marco/.ignition/fuel/fuel.gazebosim.org/openrobotics/models/casual female/4</uri>
+      <name>casual_female_2_1</name>
+      <pose>2.61995 -1.14543 0 0 -0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/marco/.ignition/fuel/fuel.gazebosim.org/openrobotics/models/casual female/4</uri>
+      <name>casual_female_2_2</name>
+      <pose>3.29229 0.354831 0 0 -0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/marco/.ignition/fuel/fuel.gazebosim.org/openrobotics/models/bathtub/1</uri>
+      <name>Bathtub_1</name>
+      <pose>-4.11617 7.02001 0 0 -0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/marco/.ignition/fuel/fuel.gazebosim.org/openrobotics/models/crocodile/4</uri>
+      <name>crocodile_2</name>
+      <pose>1.31956 2.52354 0.015 0 -0 -0</pose>
+    </include>
+    <light name='sun' type='directional'>
+      <pose>0 0 10 0 -0 0</pose>
+      <cast_shadows>true</cast_shadows>
+      <intensity>1</intensity>
+      <direction>-0.5 0.1 -0.9</direction>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <linear>0.01</linear>
+        <constant>0.90000000000000002</constant>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <spot>
+        <inner_angle>0</inner_angle>
+        <outer_angle>0</outer_angle>
+        <falloff>0</falloff>
+      </spot>
+    </light>
+  </world>
+</sdf>
